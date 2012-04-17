@@ -1,0 +1,302 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		21228379153D74E900FDE754 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21228378153D74E900FDE754 /* MobileCoreServices.framework */; };
+		21553272153D5E0700D18648 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21553271153D5E0700D18648 /* UIKit.framework */; };
+		21553274153D5E0700D18648 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21553273153D5E0700D18648 /* Foundation.framework */; };
+		21553276153D5E0700D18648 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21553275153D5E0700D18648 /* CoreGraphics.framework */; };
+		2155327C153D5E0700D18648 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2155327A153D5E0700D18648 /* InfoPlist.strings */; };
+		2155327E153D5E0700D18648 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2155327D153D5E0700D18648 /* main.m */; };
+		21553282153D5E0700D18648 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21553281153D5E0700D18648 /* AppDelegate.m */; };
+		21553285153D5E0800D18648 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21553283153D5E0800D18648 /* MainStoryboard.storyboard */; };
+		21553288153D5E0800D18648 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21553287153D5E0800D18648 /* ViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		21228378153D74E900FDE754 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		2155326D153D5E0700D18648 /* Snapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		21553271153D5E0700D18648 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		21553273153D5E0700D18648 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		21553275153D5E0700D18648 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		21553279153D5E0700D18648 /* Snapper-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Snapper-Info.plist"; sourceTree = "<group>"; };
+		2155327B153D5E0700D18648 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2155327D153D5E0700D18648 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2155327F153D5E0700D18648 /* Snapper-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Snapper-Prefix.pch"; sourceTree = "<group>"; };
+		21553280153D5E0700D18648 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		21553281153D5E0700D18648 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		21553284153D5E0800D18648 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		21553286153D5E0800D18648 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		21553287153D5E0800D18648 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2155326A153D5E0700D18648 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21228379153D74E900FDE754 /* MobileCoreServices.framework in Frameworks */,
+				21553272153D5E0700D18648 /* UIKit.framework in Frameworks */,
+				21553274153D5E0700D18648 /* Foundation.framework in Frameworks */,
+				21553276153D5E0700D18648 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		21553262153D5E0600D18648 = {
+			isa = PBXGroup;
+			children = (
+				21553277153D5E0700D18648 /* Snapper */,
+				21553270153D5E0700D18648 /* Frameworks */,
+				2155326E153D5E0700D18648 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2155326E153D5E0700D18648 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2155326D153D5E0700D18648 /* Snapper.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		21553270153D5E0700D18648 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				21228378153D74E900FDE754 /* MobileCoreServices.framework */,
+				21553271153D5E0700D18648 /* UIKit.framework */,
+				21553273153D5E0700D18648 /* Foundation.framework */,
+				21553275153D5E0700D18648 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		21553277153D5E0700D18648 /* Snapper */ = {
+			isa = PBXGroup;
+			children = (
+				21553280153D5E0700D18648 /* AppDelegate.h */,
+				21553281153D5E0700D18648 /* AppDelegate.m */,
+				21553283153D5E0800D18648 /* MainStoryboard.storyboard */,
+				21553286153D5E0800D18648 /* ViewController.h */,
+				21553287153D5E0800D18648 /* ViewController.m */,
+				21553278153D5E0700D18648 /* Supporting Files */,
+			);
+			path = Snapper;
+			sourceTree = "<group>";
+		};
+		21553278153D5E0700D18648 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				21553279153D5E0700D18648 /* Snapper-Info.plist */,
+				2155327A153D5E0700D18648 /* InfoPlist.strings */,
+				2155327D153D5E0700D18648 /* main.m */,
+				2155327F153D5E0700D18648 /* Snapper-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2155326C153D5E0700D18648 /* Snapper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2155328B153D5E0800D18648 /* Build configuration list for PBXNativeTarget "Snapper" */;
+			buildPhases = (
+				21553269153D5E0700D18648 /* Sources */,
+				2155326A153D5E0700D18648 /* Frameworks */,
+				2155326B153D5E0700D18648 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Snapper;
+			productName = Snapper;
+			productReference = 2155326D153D5E0700D18648 /* Snapper.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		21553264153D5E0600D18648 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 21553267153D5E0600D18648 /* Build configuration list for PBXProject "Snapper" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 21553262153D5E0600D18648;
+			productRefGroup = 2155326E153D5E0700D18648 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2155326C153D5E0700D18648 /* Snapper */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2155326B153D5E0700D18648 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2155327C153D5E0700D18648 /* InfoPlist.strings in Resources */,
+				21553285153D5E0800D18648 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		21553269153D5E0700D18648 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2155327E153D5E0700D18648 /* main.m in Sources */,
+				21553282153D5E0700D18648 /* AppDelegate.m in Sources */,
+				21553288153D5E0800D18648 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2155327A153D5E0700D18648 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2155327B153D5E0700D18648 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		21553283153D5E0800D18648 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				21553284153D5E0800D18648 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		21553289153D5E0800D18648 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Elymar Apao";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Elymar Apao";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2155328A153D5E0800D18648 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Elymar Apao";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Elymar Apao";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2155328C153D5E0800D18648 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Snapper/Snapper-Prefix.pch";
+				INFOPLIST_FILE = "Snapper/Snapper-Info.plist";
+				New_Setting = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2155328D153D5E0800D18648 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Snapper/Snapper-Prefix.pch";
+				INFOPLIST_FILE = "Snapper/Snapper-Info.plist";
+				New_Setting = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		21553267153D5E0600D18648 /* Build configuration list for PBXProject "Snapper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21553289153D5E0800D18648 /* Debug */,
+				2155328A153D5E0800D18648 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2155328B153D5E0800D18648 /* Build configuration list for PBXNativeTarget "Snapper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2155328C153D5E0800D18648 /* Debug */,
+				2155328D153D5E0800D18648 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 21553264153D5E0600D18648 /* Project object */;
+}
