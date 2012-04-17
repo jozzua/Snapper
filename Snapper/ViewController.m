@@ -102,12 +102,27 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
                            objectForKey:UIImagePickerControllerMediaType];
     [self dismissModalViewControllerAnimated:YES];
     if ([mediaType isEqualToString:(NSString *)kUTTypeImage]) {
+
         UIImage *image = [info 
-                          objectForKey:UIImagePickerControllerOriginalImage];
+                          objectForKey:UIImagePickerControllerEditedImage];
         
-        imageView.image = image;
+
+        
+        UIGraphicsBeginImageContextWithOptions(image.size, YES, image.scale);
+        [image drawAtPoint:CGPointZero];
+        
+        NSString *caption = @"Hello World";
+        UIFont *captionFont = [UIFont boldSystemFontOfSize:36.0];
+        [[UIColor whiteColor] setFill]; // or setStroke? I am not sure.
+        [caption drawAtPoint:CGPointMake(10.0f, 250.0f) withFont:captionFont];
+        
+        UIImage *resultImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();        
+        
+        imageView.image = resultImage;
+        
         if (newMedia)
-            UIImageWriteToSavedPhotosAlbum(image, 
+            UIImageWriteToSavedPhotosAlbum(resultImage, 
                                            self,
                                            @selector(image:finishedSavingWithError:contextInfo:),
                                            nil);
@@ -136,6 +151,9 @@ finishedSavingWithError:(NSError *)error
 {
     [self dismissModalViewControllerAnimated:YES];
 }
+
+
+
 
 
 - (IBAction)takePic:(id)sender {
