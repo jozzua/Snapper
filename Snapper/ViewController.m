@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 
+#import <Twitter/Twitter.h>
+
 @interface ViewController ()
 
 @end
@@ -18,11 +20,14 @@
 @synthesize imgPicker;
 @synthesize takePicButton;
 @synthesize takeGalPicButton;
+@synthesize priceField;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [self showPhotoMenu];
+
 }
 
 - (void)viewDidUnload
@@ -31,6 +36,7 @@
     [self setImgPicker:nil];
     [self setTakePicButton:nil];
     [self setTakeGalPicButton:nil];
+    [self setPriceField:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -38,6 +44,22 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+
+- (void)composeTweet
+{
+
+    TWTweetComposeViewController *tweetComposeViewController =
+    [[TWTweetComposeViewController alloc] init];
+//    [tweetComposeViewController setInitialText:@"#foodsnap"];
+    [tweetComposeViewController addURL:[NSURL URLWithString:@"http://foodsnap.in"]];
+    [tweetComposeViewController addImage:imageView.image];
+    [tweetComposeViewController setCompletionHandler:
+     ^(TWTweetComposeViewControllerResult result) {
+         [self dismissModalViewControllerAnimated:YES];
+     }];
+    [self presentModalViewController:tweetComposeViewController animated:YES];
 }
 
 
@@ -107,19 +129,28 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
                           objectForKey:UIImagePickerControllerEditedImage];
         
 
+        NSString *myString = priceField.text;
+        NSLog(@" The String is: %@",myString);
         
         UIGraphicsBeginImageContextWithOptions(image.size, YES, image.scale);
         [image drawAtPoint:CGPointZero];
         
-        NSString *caption = @"Hello World";
+        NSString *caption = myString;
+        
         UIFont *captionFont = [UIFont boldSystemFontOfSize:36.0];
+        [[UIColor blackColor] setFill]; // or setStroke? I am not sure.
+        [caption drawAtPoint:CGPointMake(11.0f, 201.0f) withFont:captionFont];
+        
+        UIFont *captionFont2 = [UIFont boldSystemFontOfSize:36.0];
         [[UIColor whiteColor] setFill]; // or setStroke? I am not sure.
-        [caption drawAtPoint:CGPointMake(10.0f, 250.0f) withFont:captionFont];
+        [caption drawAtPoint:CGPointMake(10.0f, 200.0f) withFont:captionFont2];
         
         UIImage *resultImage = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();        
         
         imageView.image = resultImage;
+        
+        
         
         if (newMedia)
             UIImageWriteToSavedPhotosAlbum(resultImage, 
@@ -131,6 +162,8 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     {
 		// Code here to support video if enabled
 	}
+    
+
 }
 -(void)image:(UIImage *)image
 finishedSavingWithError:(NSError *)error 
@@ -153,7 +186,31 @@ finishedSavingWithError:(NSError *)error
 }
 
 
+- (void)showPhotoMenu
+{
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        
+        UIActionSheet *actionSheet = [[UIActionSheet alloc]
+                                      initWithTitle:nil
+                                      delegate:self
+                                      cancelButtonTitle:@"Cancel"
+                                      destructiveButtonTitle:nil
+                                      otherButtonTitles:@"Take Photo", @"Choose From Library", nil];
+        
+        [actionSheet showInView:self.view];
+    } else {
+        [self takeLibraryImage];
+    }
+}
 
+- (void)actionSheet:(UIActionSheet *)theActionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0) {
+        [self useCamera];
+    } else if (buttonIndex == 1) {
+        [self takeLibraryImage];
+    }
+}
 
 
 - (IBAction)takePic:(id)sender {
@@ -165,7 +222,22 @@ finishedSavingWithError:(NSError *)error
 - (IBAction)galPic:(id)sender {
     
     [self takeLibraryImage];
+
 }
 
+- (IBAction)tweeetThis:(id)sender {
+    [self composeTweet];
+}
+
+
+-(IBAction)done
+
+{
+    
+    NSLog(@"Contents of the text field: %@", self.priceField.text);
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    
+}
 
 @end
